@@ -18,10 +18,8 @@ public class MybatisController {
     /**** 회원 정보 조회 - Mybatis ****/
     @GetMapping("/selectForMybatis")
     public String selectAllMember(Model model) {
-
         List<Map<String, Object>> result = mybatisService.selectAllMember();
-        model.addAttribute("result", result);
-        System.out.println(result);
+        model.addAttribute("member", result);
 
         return "main/result";
     }
