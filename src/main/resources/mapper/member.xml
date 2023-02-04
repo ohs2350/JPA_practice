@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.JPA_practice.DataAccess.MybatisDAO">
+    <!-- 리절트 맵 정의 -->
+    <resultMap id="memberResult" type="MemberDTO">
+        <result property="member_ID" column="member_ID" />
+        <result property="member_PW" column="member_PW" />
+        <result property="member_NAME" column="member_NAME" />
+        <result property="member_ADDRESS" column="member_ADDRESS" />
+        <result property="member_POST" column="member_POST" />
+        <result property="member_PHONE" column="member_PHONE" />
+        <result property="member_JOINDATE" column="member_JOINDATE" />
+        <result property="member_BIRTH" column="member_BIRTH" />
+        <result property="member_LEVEL" column="member_LEVEL" />
+        <result property="member_BUY" column="member_BUY" />
+    </resultMap>
+
+    <!-- 회원 전체 목록 -->
+    <select id="selectAllMember" resultType="java.util.Map" >
+		select * from member
+    </select>
+
+
+</mapper>
