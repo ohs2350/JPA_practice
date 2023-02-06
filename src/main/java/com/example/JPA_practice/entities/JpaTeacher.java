@@ -25,4 +25,11 @@ public class JpaTeacher {
     */
     @OneToMany(mappedBy = "jpaTeacher")
     private List<JpaStudent> JpaStudents = new ArrayList<JpaStudent>();
+
+
+    /*
+     * 양방향 N:N (1:N N:1로 구현)
+     */
+    @OneToMany(mappedBy = "jpaTeacher")
+    private List<JpaSignup> jpaSignups = new ArrayList<JpaSignup>();
 }
